@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+
+
+{% block content %}
+    <h1>New message</h1>
+
+    <form method="post">
+        <textarea rows="4" cols="80" name="message"></textarea><br>
+        <button type="submit">send</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,12 @@
+<header>
+    {% for message in get_flashed_messages() %}
+        <p class="message">{{ message }}</p>
+    {% endfor %}
+
+    {% if g.username %}
+        logged in as {{ g.username }}
+        <a href="{{ url_for('logout') }}">logout</a>
+    {% else %}
+        <a href="{{ url_for('login') }}">login</a>
+    {% endif %}
+</header>
